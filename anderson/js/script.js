@@ -11,13 +11,12 @@ $(function(){
 			var ind = $(this).index();
 			$(this).attr('data-ind', ind);
 			$('.mainpage-slide-navigation').append('<a class="nav-link" data-index="' + ind + '" href="#">' + navname + '</a>');
-			console.log(ind, $(this).offset().top);
 		});
 	});
 	$('.mainpage-slide-big').on('click', '.nav-link', function (e) {
 		e.preventDefault();
 		var ind = $(this).data('index');
-		var to = $('[data-ind="'+ind+'"]').offset().top;
+		var to = $('[data-ind="'+ind+'"]').height() * ind;
 		$('.mainpage-slide-big').animate({'scrollTop': to}, 400);
 		console.log($(this).text(), to);
 	});
@@ -39,6 +38,7 @@ $(function(){
 		dots: false
 	});
 
+	//$('.mainpage-slide-big').customScrollbar();
 	ymaps.ready(init);
     var myMap,
         myPlacemark;
