@@ -10,15 +10,14 @@ $(function(){
 			var navname = $(this).data('nav-name');
 			var ind = $(this).index();
 			$(this).attr('data-ind', ind);
-			$('.mainpage-slide-navigation').append('<a class="nav-link" data-index="' + ind + '" href="#">' + navname + '</a>');
+			$('.mainpage-slide-navigation').append('<div class="nav-link"><a data-index="' + ind + '" href="#">' + navname + '</a></div>');
 		});
 	});
-	$('.mainpage-slide-big').on('click', '.nav-link', function (e) {
+	$('.mainpage-slide-big').on('click', '.nav-link a', function (e) {
 		e.preventDefault();
 		var ind = $(this).data('index');
 		var to = $('[data-ind="'+ind+'"]').height() * ind;
 		$('.mainpage-slide-big').animate({'scrollTop': to}, 400);
-		console.log($(this).text(), to);
 	});
 	
 	// Опции слайдера
@@ -38,23 +37,9 @@ $(function(){
 		dots: false
 	});
 
-	//$('.mainpage-slide-big').customScrollbar();
-	ymaps.ready(init);
-    var myMap,
-        myPlacemark;
-
-    function init(){     
-        myMap = new ymaps.Map("map", {
-            center: [55.76, 37.64],
-            zoom: 12
-        });
-
-        myPlacemark = new ymaps.Placemark([55.76, 37.64], { 
-            hintContent: 'Москва!', 
-            balloonContent: 'Столица России' 
-        });
-
-        myMap.geoObjects.add(myPlacemark);
-    }
+	$('.map-filter div').on('click', function () {
+		$('.map-filter div').removeClass('active');
+		$(this).addClass('active');
+	});
 
 });

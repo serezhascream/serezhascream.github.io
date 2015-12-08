@@ -188,21 +188,50 @@ section {
 /*SLIDER*/
 .owl-item { height: 590px; }
 .mainpage-slide { height: 100%; }
-.mainpage-slide { overflow-y: auto;  }
-.mainpage-slide-navigation {
+.mainpage-slide-big {
+	overflow-y: auto;
+	width: 1038px;
+    padding-right: 18px;
+}
+.slide-nav-wrapper {
 	position: fixed;
-	display: block;
-	bottom: 36px;
+    display: block;
+    height: 53px;
+    width: 1020px;
+    bottom: 36px;
+    text-align: center;
+}
+.mainpage-slide-navigation {
+	position: relative;
+	display: inline-block;
 	height: 53px;
 }
 .nav-link {
+	position: relative;
 	display: inline-block;
     float: left;
     width: 122px;
-    color: #602b06;
-    font-size: 13px;
-    font-weight: 700;
-    text-decoration: none;}
+    height: 53px;
+    margin: 0 30px;
+}
+.nav-link a {
+	position: absolute;
+	display: block;
+	color: #602b06;
+	font-size: 13px;
+	font-weight: 700;
+	text-decoration: none;
+	top: 50%;
+	left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.nav-link a:hover {
+	color: #86be51;
+	font-size: 29px;
+	font-weight: 700;
+	width: 209px;
+}
 /*1ST SLIDE*/
 .slider-row {
 	position: relative;
@@ -412,6 +441,52 @@ section {
     width: 732px;
     height: 100%;
 }
+.map-filter {
+	position: absolute;
+	display: block;
+	bottom: 18px;
+	left: 305px;
+}
+.map-filter div {
+	display: inline-block;
+    cursor: pointer;
+    padding: 13px 25px 9px 41px;
+    color: #693c2d;
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
+    background-size: 22px;
+    background-repeat: no-repeat;
+    background-position: 8px center;
+}
+.map-filter div:hover, .map-filter div.active  {
+	background-color: #86be51;
+	color: #fff;
+}
+.map-city-select {
+	position: absolute;
+    display: block;
+    right: 8px;
+    top: 50px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
+    font-size: 15px;
+    color: #00510f;
+    cursor: pointer;
+    background-image: url('../img/angle_down.png');
+    background-repeat: no-repeat;
+    background-position: 88% center;
+    padding: 11px 42px 11px 25px;
+}
+.ct_btn { background-image: url('../img/map_filter_city.png');}
+.ct_btn:hover, .ct_btn.active { background-image: url('../img/map_filter_city_a.png');}
+.pl_btn { background-image: url('../img/map_filter_play.png');}
+.pl_btn:hover, .pl_btn.active { background-image: url('../img/map_filter_play_a.png');}
+.sc_btn { background-image: url('../img/map_filter_shop.png');}
+.sc_btn:hover, .sc_btn.active { background-image: url('../img/map_filter_shop_a.png');}
+.ca_btn { background-image: url('../img/map_filter_candy.png');}
+.ca_btn:hover, .ca_btn.active { background-image: url('../img/map_filter_candy_a.png');}
 
 	/*MAP STYLES*/
 	.ymaps-2-1-31-button.ymaps-2-1-31-button,
