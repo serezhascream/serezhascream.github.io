@@ -1,4 +1,4 @@
-﻿var wysiAdd = React.createClass({
+﻿var wysiAdd = ReactDOM.createClass({
 	render: function() {
 		return (
 			<div className="testClass">
