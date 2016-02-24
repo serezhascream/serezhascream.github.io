@@ -8,4 +8,4 @@
 	}
 });
 
-ReactDOM.render(<wysiAdd />, document.body);
+ReactDOM.render(<wysiAdd />, document.getElementById('test'));
