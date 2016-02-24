@@ -1,4 +1,4 @@
-﻿var wysiAdd = ReactDOM.createClass({
+﻿var Wysi = ReactDOM.createClass({
 	render: function() {
 		return (
 			<div class="testClass"><h1>TEST</h1></div>
@@ -6,4 +6,4 @@
 	}
 });
 
-ReactDOM.render(<wysiAdd />, test);
+ReactDOM.render(<Wysi />, test);
