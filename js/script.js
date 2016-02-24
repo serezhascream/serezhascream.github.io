@@ -1,9 +1,7 @@
 ﻿var wysiAdd = ReactDOM.createClass({
 	render: function() {
 		return (
-			<div className="testClass">
-			<h1>TEST</h1>
-			</div>
+			<div class="testClass"><h1>TEST</h1></div>
 		)
 	}
 });
