@@ -1,0 +1,20 @@
+/*colors
+#CDDDDD background1;
+#ACBDBA background2;
+#2E2F2F text1;
+#051014 text2;
+#579A81 accent1;
+#57819A accent2;
+*/
+
+:root { font-size: 10px; }
+body {
+    background-color: #CDDDDD;
+	color: #051014;
+}
+.header {
+	background-color: #acbdba;
+}
+.header h1 {
+	color: #579A81;
+}
